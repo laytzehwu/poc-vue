@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue 2 Study</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section id="vue-app">
+            <h1>{{ showWelcomeMessage() }}</h1>
+            <div>Name: {{ name }}</div>
+            <div>
+                <p>
+                    <span>Age: {{ age }}</span>
+                    <span v-on:click="age++">+</span>
+                    <span v-on:click="age--">-</span>
+                </p>
+            </div>
+            <div>
+                <label>
+                    Greeting
+                    <input type="text" 
+                        :value="greeting"
+                        v-on:input="greeting = $event.target.value"
+                    >
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" id="male" value="Male" v-model="gender">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" id="female" value="Female" v-model="gender">
+                    Female
+                </label>
+            </div>
+            <div>{{ showGendarMsg() }}</div>
+            <div>
+                <label>
+                    <input type="checkbox" id="monday" value="Monday" v-model="workingDays">
+                    Monday
+                </label>
+                <label>
+                    <input type="checkbox" id="tuesday" value="Tuesday" v-model="workingDays">
+                    Tuesday
+                </label>
+                <label>
+                    <input type="checkbox" id="wednesday" value="Wednesday" v-model="workingDays">
+                    Wednesday
+                </label>
+                <label>
+                    <input type="checkbox" id="thursday" value="Thursday" v-model="workingDays">
+                    Thursday
+                </label>
+                <label>
+                    <input type="checkbox" id="friday" value="Friday" v-model="workingDays">
+                    Friday
+                </label>
+                <label>
+                    <input type="checkbox" id="saturday" value="Saturday" v-model="workingDays">
+                    Saturday
+                </label>
+                <label>
+                    <input type="checkbox" id="sunday" value="Sunday" v-model="workingDays">
+                    Sunday
+                </label>
+            </div>
+            <div>{{ showWorkDaysNotes() }}</div>
+            <div>
+                Country:
+                <label>
+                    <input type="radio" name="country" value="Malaysia" v-model="country"> Malaysia
+                </label>
+                <label>
+                    <input type="radio" name="country" value="Singapore" v-model="country"> Singapore
+                </label>
+            </div>
+            <div v-if="country == 'Malaysia'">
+                <label>
+                    What state you stay:
+                    <select v-model="stayInMalaysiaState" v-on:change="changeMalaysiaState($event)">
+                        <option>I don't stay in Malaysia</option>
+                        <option v-for="state in malaysiaStates" :value="state.label">{{ state.label }}</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+    </body>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+</html>
