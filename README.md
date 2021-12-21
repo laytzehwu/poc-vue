@@ -62,3 +62,11 @@ I am following below setting:
 * Use a-la-carte components? No
 * Use babel/polyfill? Yes
 * Select locale English
+
+## SASS
+
+In order to allow code SASS in ```.vue``` file, sass and sass-loader is required to install. Run below command:
+
+```
+yarn add sass sass-loader -D
+```

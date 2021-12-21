@@ -38,19 +38,22 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <AhLayPoC />
+      <AhLayFooter />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import AhLayPoC from './components/AhLayPoC.vue';
+import AhLayFooter from './components/AhLayFooter.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    AhLayPoC,
+    AhLayFooter,
   },
 
   data: () => ({
