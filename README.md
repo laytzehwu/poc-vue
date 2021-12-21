@@ -68,5 +68,45 @@ I am following below setting:
 In order to allow code SASS in ```.vue``` file, sass and sass-loader is required to install. Run below command:
 
 ```
-yarn add sass sass-loader -D
+yarn add sass sass-loader@^10.1.1 -D
 ```
+
+Note: Latest version of sass-loader does not work with latest Vue.
+
+## Differences between simple implementation
+
+There are some gaps after implemented [Single file component](https://vuejs.org/v2/guide/single-file-components.html) and Vuetify.
+
+### $event became value
+
+In previous input can be bind as below:
+
+```
+<input type="text" 
+    :value="greeting"
+    v-on:input="greeting = $event.target.value"
+>
+```
+
+Now it become:
+
+```
+<v-text-field
+    label="Greeting message"
+    :value="greeting"
+    v-on:input="greeting  = $event"
+></v-text-field>
+
+```
+
+*$event* is no longer event but new value of input.
+
+## Lifecycle
+
+[Created](https://v3.vuejs.org/api/options-lifecycle-hooks.html#created) has been used in [WeekDays.vue](./components/WekDays.vue). The purpose of using it is to copy the initiate value from props to bidning data.
+
+## Services
+
+> Vue.js itself is not a full-blown framework - it is focused on the view layer only.
+
+We can define some complicated logic in classes, see [services](./services) folder.
