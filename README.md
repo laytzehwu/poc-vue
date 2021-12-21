@@ -1,6 +1,6 @@
 # Repo of studying Vue 2
 
-Refer simple implementation at [StudyNode.md](StudyNode.md)
+Refer simple implementation at [StudyNote.md](StudyNote.md)
 
 ## Prerequisite
 
