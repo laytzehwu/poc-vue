@@ -109,4 +109,4 @@ Now it become:
 
 > Vue.js itself is not a full-blown framework - it is focused on the view layer only.
 
-We can define some complicated logic in classes, see [services](./services) folder.
+We can define some complicated logic in classes, see [services](./src/services) folder.
