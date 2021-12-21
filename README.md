@@ -42,3 +42,23 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Vuetify
+
+Because of using Windows + Git Bash, we need to run below command to install Vuetify:
+
+```
+winpty vue.cmd add vuetify
+```
+
+I am following below setting:
+* Choose a preset: Configure (advanced)
+* Use a pre-made template? (will replace App.vue and HelloWorld.vue) Yes
+* Use custom theme? Yes
+* Use custom properties (CSS variables)? Yes
+* Select icon font Material Icons
+* Use fonts as a dependency (for Electron or offline)? No
+* Use a-la-carte components? No
+* Use babel/polyfill? Yes
+* Select locale English
