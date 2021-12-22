@@ -113,4 +113,4 @@ We can define some complicated logic in classes, see [services](./src/services) 
 
 ## Data exchange
 
-Component calls another component is happen, data is passing between them. See further detail in [components](./components).
+Component calls another component is happen, data is passing between them. See further detail in [components](./src/components).
